@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
     <title>Lizard Spock</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Rock, Paper, Scissors, Lizard or perhaps Spock?</h1>
-    
+    <div class="textBox">
+      <h3>Rules</h3>
+      <ul>
+        <li>Rock crushes Scissors: <em>Rock wins against Scissors.</em></li>
+        <li>Scissors cuts Paper: Scissors win against Paper.</li>
+        <li>Paper covers Rock: Paper wins against Rock.</li>
+        <li>Rock crushes Lizard: Rock wins against Lizard.</li>
+        <li>Lizard poisons Spock: Lizard wins against Spock.</li>
+        <li>Spock smashes Scissors: Spock wins against Scissors.</li>
+        <li>Scissors decapitates Lizard: Scissors win against Lizard.</li>
+        <li>Lizard eats Paper: Lizard wins against Paper.</li>
+        <li>Paper disproves Spock: Paper wins against Spock.</li>
+        <li>Spock vaporizes Rock: Spock wins against Rock.</li>
+      </ul>
+    </div>
     <div class="game">
-        <button class="choice" id="rock">Rock</button>
-        <button class="choice" id="paper">Paper</button>
-        <button class="choice" id="scissors">Scissors</button>
-        <button class="choice" id="lizard">Lizard</button>
-        <button class="choice" id="spock">Spock</button>
+      <button class="choice" id="rock">Rock</button>
+      <button class="choice" id="paper">Paper</button>
+      <button class="choice" id="scissors">Scissors</button>
+      <button class="choice" id="lizard">Lizard</button>
+      <button class="choice" id="spock">Spock</button>
     </div>
 
     <div class="result">
-        <p> <span id="result">What will it be?</span></p>
+      <p><span id="result">What will it be?</span></p>
     </div>
-<div id="scoreDisplay">
-    Player: 0 | Computer: 0 | Ties: 0
-</div>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

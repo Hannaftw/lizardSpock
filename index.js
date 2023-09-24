@@ -12,27 +12,27 @@ function computerChoice() {
 }
 
 function determineWinner(playerChoice, computerChoice) {
-    if (playerChoice === computerChoice) {
-        tieScore++;
-        return "It's a tie!";
-    } else if (
-        (playerChoice === "Rock" && computerChoice === "Scissors") ||
-        (playerChoice === "Scissors" && computerChoice === "Paper") ||
-        (playerChoice === "Paper" && computerChoice === "Rock") ||
-        (playerChoice === "Rock" && computerChoice === "Lizard") ||
-        (playerChoice === "Lizard" && computerChoice === "Spock") ||
-        (playerChoice === "Spock" && computerChoice === "Scissors") ||
-        (playerChoice === "Scissors" && computerChoice === "Lizard") ||
-        (playerChoice === "Lizard" && computerChoice === "Paper") ||
-        (playerChoice === "Paper" && computerChoice === "Spock") ||
-        (playerChoice === "Spock" && computerChoice === "Rock")
-    ) {
-        playerScore++;
-        return `Player wins! ${playerChoice} beats ${computerChoice}`;
-    } else {
-        computerScore++;
-        return `Computer wins! ${computerChoice} beats ${playerChoice}`;
-    }
+  if (playerChoice === computerChoice) {
+    tieScore++;
+    return "It's a tie!";
+  } else if (
+    (playerChoice === "Rock" && computerChoice === "Scissors") ||
+    (playerChoice === "Scissors" && computerChoice === "Paper") ||
+    (playerChoice === "Paper" && computerChoice === "Rock") ||
+    (playerChoice === "Rock" && computerChoice === "Lizard") ||
+    (playerChoice === "Lizard" && computerChoice === "Spock") ||
+    (playerChoice === "Spock" && computerChoice === "Scissors") ||
+    (playerChoice === "Scissors" && computerChoice === "Lizard") ||
+    (playerChoice === "Lizard" && computerChoice === "Paper") ||
+    (playerChoice === "Paper" && computerChoice === "Spock") ||
+    (playerChoice === "Spock" && computerChoice === "Rock")
+  ) {
+    playerScore++;
+    return `Player wins! ${playerChoice} beats ${computerChoice}`;
+  } else {
+    computerScore++;
+    return `Computer wins! ${computerChoice} beats ${playerChoice}`;
+  }
 }
 
 function updateScoreDisplay() {
@@ -46,9 +46,9 @@ choiceButtons.forEach((button) => {
     const computer = computerChoice();
     const result = determineWinner(playerChoice, computer);
     resultDisplay.textContent = `Result: ${result}`;
-     updateScoreDisplay();
+    updateScoreDisplay();
+    console.log(playerChoice, computer);
   });
 });
 
-console.log(playerChoice, computer);
 // Path: index.html
