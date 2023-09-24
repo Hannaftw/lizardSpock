@@ -12,7 +12,7 @@ function computerChoice() {
 }
 
 function determineWinner(playerChoice, computerChoice) {
-  if (playerChoice === computerChoice) {
+  if (playerChoice == computerChoice) {
     tieScore++;
     return "It's a tie!";
   } else if (
