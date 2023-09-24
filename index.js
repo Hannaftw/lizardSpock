@@ -1,4 +1,4 @@
-const choices = ["rock", "paper", "scissors", "lizard", "spock"];
+const choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
 const choiceButtons = document.querySelectorAll(".choice");
 const resultDisplay = document.getElementById("result");
 // Initialize score variables
@@ -12,29 +12,33 @@ function computerChoice() {
 }
 
 function determineWinner(playerChoice, computerChoice) {
-    if (playerChoice === computerChoice) {
-        tieScore++;
-        return "It's a tie!";
-    } else if (
-        (playerChoice === "rock" && computerChoice === "scissors") ||
-        (playerChoice === "scissors" && computerChoice === "paper") ||
-        (playerChoice === "paper" && computerChoice === "rock") ||
-        (playerChoice === "rock" && computerChoice === "lizard") ||
-        (playerChoice === "lizard" && computerChoice === "spock") ||
-        (playerChoice === "spock" && computerChoice === "scissors") ||
-        (playerChoice === "scissors" && computerChoice === "lizard") ||
-        (playerChoice === "lizard" && computerChoice === "paper") ||
-        (playerChoice === "paper" && computerChoice === "spock") ||
-        (playerChoice === "spock" && computerChoice === "rock")
-    ) {
-        playerScore++;
-        return `Player wins! ${playerChoice} beats ${computerChoice}`;
-    } else {
-        computerScore++;
-        return `Computer wins! ${computerChoice} beats ${playerChoice}`;
-    }
+  if (playerChoice == computerChoice) {
+    tieScore++;
+    return "It's a tie!";
+  } else if (
+    (playerChoice === "Rock" && computerChoice === "Scissors") ||
+    (playerChoice === "Scissors" && computerChoice === "Paper") ||
+    (playerChoice === "Paper" && computerChoice === "Rock") ||
+    (playerChoice === "Rock" && computerChoice === "Lizard") ||
+    (playerChoice === "Lizard" && computerChoice === "Spock") ||
+    (playerChoice === "Spock" && computerChoice === "Scissors") ||
+    (playerChoice === "Scissors" && computerChoice === "Lizard") ||
+    (playerChoice === "Lizard" && computerChoice === "Paper") ||
+    (playerChoice === "Paper" && computerChoice === "Spock") ||
+    (playerChoice === "Spock" && computerChoice === "Rock")
+  ) {
+    playerScore++;
+    return `Player wins! ${playerChoice} beats ${computerChoice}`;
+  } else {
+    computerScore++;
+    return `Computer wins! ${computerChoice} beats ${playerChoice}`;
+  }
 }
 
+function updateScoreDisplay() {
+  const scoreDisplay = document.getElementById("scoreDisplay");
+  scoreDisplay.textContent = `Player: ${playerScore} | Computer: ${computerScore} | Ties: ${tieScore}`;
+}
 
 choiceButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -42,7 +46,8 @@ choiceButtons.forEach((button) => {
     const computer = computerChoice();
     const result = determineWinner(playerChoice, computer);
     resultDisplay.textContent = `Result: ${result}`;
-     updateScoreDisplay();
+    updateScoreDisplay();
+    console.log(playerChoice, computer);
   });
 });
 
