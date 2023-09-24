@@ -1,14 +1,18 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
+    background-color: black;
+    color: beige;
+    font-size: 14px;
 }
 
 h1 {
-    color: #333;
+    color: #fff;
 }
 
 .game {
     margin-top: 20px;
+    border: solid 1px #fff;
 }
 
 .choice {
@@ -16,6 +20,10 @@ h1 {
     padding: 10px 20px;
     margin: 10px;
     cursor: pointer;
+    background-color: #fff;
+    color: black;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .result {
