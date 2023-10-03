@@ -47,7 +47,6 @@ choiceButtons.forEach((button) => {
     const result = determineWinner(playerChoice, computer);
     resultDisplay.textContent = `Result: ${result}`;
     updateScoreDisplay();
-    console.log(playerChoice, computer);
   });
 });
 
